@@ -1,0 +1,26 @@
+from PIL import Image
+from PIL import ImageFilter
+from struct import *
+
+test=Image.open("2.jpg")
+pranty=Image.open("paranty.jpg")
+pranty_square=pranty.resize((500,500))
+test_square=test.resize((500,500))
+#pranty_square.show()
+r1,g1,b1=pranty_square.split()
+r2,g2,b2=test_square.split()
+new_image=Image.merge("RGB",(r2,g1,b1))
+flip=new_image.transpose(Image.FLIP_TOP_BOTTOM)
+area=(100,120)
+pranty.paste(test,area)
+b_w=test.convert("L")
+blur=test.filter(ImageFilter.BLUR)
+edge=test.filter(ImageFilter.FIND_EDGES)
+Detail=test.filter(ImageFilter.DETAIL)
+#Detail.show()
+#pranty.show()
+#r.show()
+#g.show()
+#b.show()
+#new_image.show()
+#flip.show()

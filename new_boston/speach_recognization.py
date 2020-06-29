@@ -58,8 +58,8 @@ def respond(voice_date):
 
 
 
-time.sleep(1)
-while(1):
+time.sleep(5)
+while(5):
     speak("How can I help You ?")
     voice_data = record_audio()
     respond(voice_data)

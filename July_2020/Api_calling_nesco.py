@@ -17,8 +17,8 @@ payload={'transaction_id':'ABNE880000000000070',
          'utility_secret_key':'HC4FR5cKF/NnjkU0'}
 p=requests.post('http://api.sslwireless.com/api/bill-status',
                 headers={"AUTH-KEY": "ewh8ZPVDJNPqhpJWqwvzseJpdTgsUeqc",
-                       "STK-CODE": "NESCO_TEST",
-                       "Content-Type":"application/x-www-form-urlencoded"},
+                         "STK-CODE": "NESCO_TEST",
+                         "Content-Type":"application/x-www-form-urlencoded"},
          data={'transaction_id':'ABNE880000000000070',
          'utility_auth_key':'NE15836529024134',
          'utility_secret_key':'HC4FR5cKF/NnjkU0'},timeout=3)
